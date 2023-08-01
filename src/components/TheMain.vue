@@ -220,17 +220,24 @@ onMounted(() => {
               >
             </div>
             <div class="flex-1 text-left">{{ assignment.date }}</div>
-            <a :href="assignment.href" class="flex-2 text-right cursor-pointer">
-              <div class="">
-                {{ assignment.assignment[0].book }} {{ assignment.assignment[0].chapter > 0 ? assignment.assignment[0].chapter : '' }}
-                <span v-if="assignment.assignment[1] && assignment.assignment[0].book === assignment.assignment[1].book">
-                  {{ `-${assignment.assignment[1].chapter}` }}
-                </span>
+            <div class="flex-2 text-right flex">
+              <div>
+                <div>
+                  {{ assignment.assignment[0].book }} {{ assignment.assignment[0].chapter > 0 ? assignment.assignment[0].chapter : '' }}
+                  <span v-if="assignment.assignment[1] && assignment.assignment[0].book === assignment.assignment[1].book">
+                    {{ `-${assignment.assignment[1].chapter}` }}
+                  </span>
+                </div>
+                <div v-if="assignment.assignment[1] && assignment.assignment[0].book !== assignment.assignment[1].book" class="">
+                  {{ assignment.assignment[1].book }} {{ assignment.assignment[1].chapter > 0 ? assignment.assignment[1].chapter : '' }}
+                </div>
               </div>
-              <div v-if="assignment.assignment[1] && assignment.assignment[0].book !== assignment.assignment[1].book" class="">
-                {{ assignment.assignment[1].book }} {{ assignment.assignment[1].chapter > 0 ? assignment.assignment[1].chapter : '' }}
-              </div>
-            </a>
+              <a :href="assignment.href" target="_blank" class="cursor-pointer flex items-center ml-2 pb-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>  
       </div>
