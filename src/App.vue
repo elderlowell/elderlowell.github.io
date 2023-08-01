@@ -215,13 +215,17 @@ onMounted(() => {
             v-for="assignment in assignments"
             :key="assignment.date"
             class="flex justify-between items-center px-3 py-2 border-t border-neutral-700 scroll-my-10"
-            :class="{ 'dark:bg-black bg-slate-300': isToday(assignment.date) }"
+            :class="{
+              'dark:bg-black bg-slate-300': isToday(assignment.date) && !assignment.completed,
+              'bg-green-400 dark:bg-green-900 line-through': assignment.completed
+            }"
           >
             <div class="font-bold text-left mr-4 w-[38px] flex justify-center pt-[3px]">
               <input
                 type="checkbox"
                 v-model="assignment.completed"
-                class="h-4 w-4 rounded border-neutral-300 text-blue-800 focus:ring-blue-800 dark:bg-inherit dark:border-neutral-700 dark:focus:ring-offset-neutral-900" 
+                class="h-4 w-4 rounded border-neutral-300 text-green-700 focus:ring-green-700 dark:bg-inherit dark:border-neutral-700 dark:focus:ring-offset-neutral-900" 
+                :class="{ 'dark:focus:ring-offset-green-900 focus:ring-offset-green-400': assignment.completed }"
                 @change="updateLocalStorage"
               >
             </div>
