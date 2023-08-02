@@ -210,7 +210,7 @@ onMounted(() => {
               'bg-green-400 dark:bg-green-900 line-through': assignment.completed
             }"
           >
-            <div class="font-bold text-left mr-4 w-6 flex justify-left pt-[3px]">
+            <div class="font-bold text-left mr-4 w-6 flex justify-left pt-0.5">
               <input
                 type="checkbox"
                 v-model="assignment.completed"
