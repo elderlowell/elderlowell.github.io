@@ -195,7 +195,7 @@ onMounted(() => {
   <div class="w-full flex-grow overflow-y-scroll px-4 pb-4">
       <div class="w-full sm:w-1/2 sm:mx-auto">
         <div class="flex justify-between border-b px-3 pb-2 border-neutral-400 sticky top-0 bg-[var(--color-background);]">
-          <div class="font-bold text-left mr-4 w-[38px]">Done</div>
+          <div class="font-bold text-left mr-4 w-6 text-blue-500">✔️</div>
           <div class="font-bold flex-1 text-left">Date</div>
           <div class="font-bold flex-2 text-right">Daily Assignment</div>
         </div>
@@ -210,7 +210,7 @@ onMounted(() => {
               'bg-green-400 dark:bg-green-900 line-through': assignment.completed
             }"
           >
-            <div class="font-bold text-left mr-4 w-[38px] flex justify-center pt-[3px]">
+            <div class="font-bold text-left mr-4 w-6 flex justify-left pt-[3px]">
               <input
                 type="checkbox"
                 v-model="assignment.completed"
