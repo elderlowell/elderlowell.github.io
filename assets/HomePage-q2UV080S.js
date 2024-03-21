@@ -1,1 +1,0 @@
-import{_ as e}from"./NavView.vue_vue_type_script_setup_true_lang-C3B8frhM.js";import{d as a,c as o,w as s,o as t,a as _}from"./index-D8UX7SlQ.js";const c=_("div",{class:""},"Home",-1),d=a({__name:"HomePage",setup(n){return(r,m)=>(t(),o(e,null,{default:s(()=>[c]),_:1}))}});export{d as default};
