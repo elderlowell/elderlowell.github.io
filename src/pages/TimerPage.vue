@@ -37,7 +37,7 @@ const setTime = (minutes: number) => {
   <div class="p-4 border-2 border-slate-300 rounded-lg m-2 flex max-w-fit">
     <div
       id="timer"
-      class="relative rounded-full h-48 min-h-48 w-48 min-w-48 border-8 border-slate-600"
+      class="relative rounded-full h-48 min-h-48 w-48 min-w-48 border-8 border-slate-600 bg-white"
     >
       <div
         id="shade"
