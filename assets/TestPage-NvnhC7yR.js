@@ -1,0 +1,1 @@
+import{_ as e}from"./NavView.vue_vue_type_script_setup_true_lang-BvT0gYml.js";import{d as a,c as s,w as t,o,a as _}from"./index-CejAUtSh.js";const c=_("div",{class:""},"Test",-1),d=a({__name:"TestPage",setup(n){return(r,i)=>(o(),s(e,null,{default:t(()=>[c]),_:1}))}});export{d as default};
