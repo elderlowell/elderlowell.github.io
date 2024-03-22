@@ -29,9 +29,14 @@ const router = createRouter({
       component: () => import('@/pages/WidgetsPage.vue')
     },
     {
-      path: '/widgets/timer',
-      name: 'Timer',
-      component: () => import('@/pages/TimerPage.vue')
+      path: '/widgets/analog-timer',
+      name: 'Analog Timer',
+      component: () => import('@/pages/AnalogTimerPage.vue')
+    },
+    {
+      path: '/widgets/digital-timer',
+      name: 'Digital Timer',
+      component: () => import('@/pages/DigitalTimerPage.vue')
     }
   ]
 })

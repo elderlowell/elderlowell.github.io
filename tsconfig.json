@@ -1,6 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
   "files": [],
+  "include": ["./.dot/**/*.vue", "./dot/**/*.vue", "./src/**/*.vue"],
   "references": [
     {
       "path": "./tsconfig.node.json"

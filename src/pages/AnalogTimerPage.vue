@@ -2,6 +2,7 @@
 import { ref, type Ref } from 'vue'
 import MadeByFooter from '@/components/MadeByFooter.vue'
 
+const sound = new Audio('https://freesfx.co.uk/sound/14777_1460060679.mp3')
 const durationInMiliseconds = ref(0)
 const timerInterval: Ref<ReturnType<typeof setInterval> | undefined> = ref()
 const mute = ref(false)
@@ -24,7 +25,6 @@ const updateTimer = () => {
   if (durationInMiliseconds.value === 0) {
     stopTimer()
     if (!mute.value) {
-      const sound = new Audio('https://freesfx.co.uk/sound/14777_1460060679.mp3')
       sound.play()
     }
   }

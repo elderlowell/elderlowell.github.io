@@ -5,7 +5,13 @@ const routes = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Projects', children: [{ name: 'Test', path: '/projects/test' }] },
-  { name: 'Widgets', children: [{ name: 'Timer', path: '/widgets/timer' }] }
+  {
+    name: 'Widgets',
+    children: [
+      { name: 'Analog Timer', path: '/widgets/analog-timer' },
+      { name: 'Digital Timer', path: '/widgets/digital-timer' }
+    ]
+  }
 ]
 </script>
 
@@ -27,14 +33,14 @@ const routes = [
             leave-to-class="transform opacity-0 scale-95"
           >
             <MenuItems
-              class="absolute right-2 z-10 mt-2 w-auto origin-top-right rounded-md bg-white p-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              class="absolute right-2 z-10 mt-2 w-56 origin-top-right rounded-md bg-white p-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
             >
               <MenuItem v-for="child in route.children" :key="child.name" v-slot="{ active }">
                 <router-link
                   :to="child.path"
                   :class="[
                     active ? 'text-rose-700 rounded-md' : '',
-                    'block text-right px-4 py-2 text-lg text-gray-700'
+                    'block text-right px-4 py-3 text-lg text-gray-700'
                   ]"
                   >{{ child.name }}
                 </router-link>
